@@ -85,6 +85,15 @@ public class MainActivity extends AppCompatActivity {
         {
             // Thêm dữ liệu săn vào database
             addProductToDatabase();
+            byte[] imageData1 = convertDrawableToByteArray(this,R.drawable.daikin);
+            byte[] imageData2 = convertDrawableToByteArray(this,R.drawable.funiki);
+            byte[] imageData3 = convertDrawableToByteArray(this,R.drawable.casper);
+            dbHelper.insertData(1,"máy lạnh Daikin Inverter 1HP ",11340000,
+                    5, imageData1);
+            dbHelper.insertData(2,"máy lạnh Funiki Inverter 1HP HSC09TMU ",7590000,
+                    5, imageData2);
+            dbHelper.insertData(3,"máy lạnh Casper Inverter 1HP SC-09FS33 ",6990000,
+                    5, imageData3);
         }
 
         // Load dữ liệu từ SQLite và cập nhật GridView
