@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name"></string>
+    <string name="tvTieuDeMain"></string>
+    <string name="nhap_du_lieu">Trang nhập dữ liệu</string>
+    <string name="open">Open Menu</string>
+    <string name="close">Close Menu</string>
+    <string name="add" translatable="true">thêm sản phẩm</string>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    </style>
+</resources>

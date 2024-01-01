@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="backgroundProduct">#2803A9F4</color>
+    <color name="tieuDe">#FDF6FE</color>
+    <color name="purple">#4C39CB</color>
+    <color name="red">#E34848</color>
+    <color name="green">#4CAF50</color>
+    <color name="gray">#F4F4F4</color>
+    <color name="homeColor">#F4EAE1</color>
+    <color name="btnHomeColor">#FD7D71</color>
+    <color name="backgroundGridItem">#FFDDBE</color>
+
+
+</resources>

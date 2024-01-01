@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/productImageViewDelete"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_launcher_background"
+        />
+
+
+    <TextView
+        android:id="@+id/productNameTextViewDelete"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="7dp"
+        android:layout_toRightOf="@id/productImageViewDelete"
+        android:text="Product Name"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/productPriceTextViewDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/productNameTextViewDelete"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@+id/productImageViewDelete"
+        android:text="Giá: 5,000,000 vnđ" />
+
+    <TextView
+        android:id="@+id/productQuantityTextViewDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/productPriceTextViewDelete"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-15dp"
+        android:layout_toEndOf="@+id/productPriceTextViewDelete"
+        android:text="SL: 5"
+        android:textStyle="bold"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btnDeleteProduct"
+            style="@android:style/Widget.Material.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_delete_outline_24"
+            app:tint="@color/red" />
+
+        <ImageButton
+            android:id="@+id/btnEditProduct"
+            style="@android:style/Widget.Material.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_edit_24"
+            app:tint="#009688" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
