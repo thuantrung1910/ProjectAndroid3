@@ -139,8 +139,6 @@ public class DeleteProductActivity extends AppCompatActivity {
         }
     }
 
-
-
     @Override
     protected void onDestroy() {
         super.onDestroy();

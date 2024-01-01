@@ -3,13 +3,14 @@ package com.tranvuquangtruong.speakerstore;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.tranvuquangtruong.speakerstore.Models.ProductModel;
 
 public class DBHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "product_db";
+    public static final String DATABASE_NAME = "myProduct_db";
     public static final int DATABASE_VERSION = 1;
 
     public static final String TABLE_PRODUCTS = "products";
@@ -26,8 +27,7 @@ public class DBHelper extends SQLiteOpenHelper {
                     COLUMN_NAME + " TEXT," +
                     COLUMN_PRICE + " REAL," +
                     COLUMN_QUANTITY + " INTEGER," +
-                    COLUMN_IMAGE + " BLOB" +
-                    ")";
+                    COLUMN_IMAGE + " BLOB" + ");";
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -44,6 +44,23 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public void insertData(int productId, String productName, double productPrice,
+                           int productQuantity, byte[] productImage) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_NAME, productName);
+        values.put(COLUMN_PRICE, productPrice);
+        values.put(COLUMN_QUANTITY, productQuantity);
+        values.put(COLUMN_IMAGE, productImage);
+
+        try {
+            db.insertOrThrow(TABLE_PRODUCTS, null, values);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            db.close();
+        }
+    }
 
     public boolean deleteProduct(int productId) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -119,5 +136,15 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
 
         return product;
+    }
+
+    public boolean isDatabaseEmpty() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_PRODUCTS, null);
+
+        boolean isEmpty = cursor.getCount() == 0;
+
+        cursor.close();
+        return isEmpty;
     }
 }
