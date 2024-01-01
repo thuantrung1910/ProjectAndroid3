@@ -25,30 +25,31 @@
 
     <GridView
         android:id="@+id/gridView"
-        android:layout_width="wrap_content"
-        android:layout_height="630dp"
+        android:layout_width="398dp"
+        android:layout_height="496dp"
         android:gravity="center"
         android:horizontalSpacing="3dp"
         android:numColumns="2"
         android:paddingTop="5dp"
-        android:paddingBottom="80dp"
+        android:paddingBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddMain" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAddMain"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnAddMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="thêm giữ liệu"
+        android:text="thêm dữ liệu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintVertical_bias="0.046" />
 
     <Button
         android:id="@+id/buttonEditMain"
@@ -57,10 +58,21 @@
         android:text="chỉnh sửa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintHorizontal_bias="0.883"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintVertical_bias="0.046" />
+
+    <Button
+        android:id="@+id/buttonReload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tải lại trang"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.142" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
